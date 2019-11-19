@@ -32,8 +32,10 @@
 
 echo '<br><center><h1>Product Table</h1></center>';
 echo '
- 
-  
+ <div class="col-sm-8 col-sm-offset-2">
+  <button id="addnew" class="btn btn-success"> New</button>
+   </div>
+   <br>
       <table class="table">
         <thead>
           <tr align="center">
@@ -45,6 +47,8 @@ echo '
           </tr>
         </thead>
       <tbody>';
+
+
           //  <tbody id="tbody">
         if ($result = $db->query($sql))
         {
