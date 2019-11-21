@@ -46,7 +46,53 @@
     </div>
 </div>
 
+<!-- Edit -->
+<div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <center><h4 class="modal-title" id="myModalLabel">Edit Member</h4></center>
+            </div>
+            <div class="modal-body">
+      <div class="container-fluid">
+      <form id="editForm">
+        <input type="hidden" class="id" name="id">
+        <div class="row form-group">
+          <div class="col-sm-2">
+            <label class="control-label" style="position:relative; top:7px;">Product Name:</label>
+          </div>
+          <div class="col-sm-10">
+            <input type="text" class="form-control product_name" name="product_name">
+          </div>
+        </div>
+        <div class="row form-group">
+          <div class="col-sm-2">
+            <label class="control-label" style="position:relative; top:7px;">Price:</label>
+          </div>
+          <div class="col-sm-10">
+            <input type="text" class="form-control price" name="price">
+          </div>
+        </div>
+        <div class="row form-group">
+          <div class="col-sm-2">
+            <label class="control-label" style="position:relative; top:7px;">Category:</label>
+          </div>
+          <div class="col-sm-10">
+            <input type="text" class="form-control category" name="category">
+          </div>
+        </div>
+            </div> 
+      </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="submit" class="btn btn-success">Update</button>
+      </form>
+            </div>
 
+        </div>
+    </div>
+</div>
 
 
  <!-- Delete Modal -->
