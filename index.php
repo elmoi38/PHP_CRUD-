@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+<!-- 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -14,7 +14,20 @@
 
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.6.2/core.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.6.2/core.min.js"></script> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.css">
+
+     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.js"></script>
 
 
 <meta charset="utf-8"/>
@@ -36,13 +49,14 @@ echo '
   <button id="addnew" class="btn btn-success"> New</button>
    </div>
    <br>
-      <table class="table">
-        <thead>
-          <tr align="center">
-            <th><em class="fa fa-cog"></em></th>
-            <th>Product Name</th>
-            <th>Cost</th>
-            <th>Category</th>
+      <table id="table" class="table table-striped table-bordered table-sm " cellspacing="0" width="100%" data-search="true" data-visible-search="true" data-search-align="right" data-pagination="true" >
+
+        <thead align="center">
+          <tr>
+            <th class="text-center"><em class="fa fa-cog"></em></th>
+            <th data-field="product_name" class="text-center">Product Name</th>
+            <th data-field="price" class="text-center">Cost</th>
+            <th data-field="category" class="text-center">Category</th>
            
           </tr>
         </thead>
@@ -77,7 +91,7 @@ echo '
            
 
 echo        "<td>" . $row['product_name'] . "</td>";
-echo        "<td>" . $row['price'] . "</td>";
+echo        "<td> $"  . $row['price'] . "</td>";
 echo        "<td>" . $row['category'] . "</td>";
 
 echo      "</tr>";
@@ -96,14 +110,19 @@ echo  '   </tr>
         } // show an error if there is an issue with the database query
        
 
-      
+
     $database->close();
 ?>
 
 <?php include("modal.php")?> 
 <script src="app.js"></script>
+<!-- BootStrap Advance Search-->
+<script type="text/javascript">
+        $(document).ready(function () {
 
-
+          $('#table').bootstrapTable()
+        });
+</script>
 </body>
 </html>
 

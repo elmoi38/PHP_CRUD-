@@ -46,22 +46,24 @@ $('#addnew').click(function(){
       dataType: 'json',
       success: function(response){
         if(response.error){
-          $('#alert').show();
-          $('#alert_message').html(response.message);
+         
+          // $('#alert').show();
+          // $('#alert_message').html(response.message);
         }
         else{
-          $('#alert').show();
-          $('#alert_message').html(response.message);
+          // $('#alert').show();
+          // $('#alert_message').html(response.message);
+          $('#edit').modal('hide');
            myFunction();
         }
 
-        $('#edit').modal('hide');
+        
       }
     });
   });
   //
 
-  //hide-delete message (will move to salvage_asset table)
+  //delete
   $(document).on('click', '.delete', function()
   {
     var id = $(this).data('id');

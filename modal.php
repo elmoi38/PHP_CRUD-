@@ -15,7 +15,8 @@
             <label class="control-label" style="position:relative; top:7px;">Product Name:</label>
           </div>
           <div class="col-sm-10">
-            <input type="text" class="form-control" name="product_name">
+            <input type="text" class="form-control" name="product_name" required>
+            
           </div>
         </div>
         <div class="row form-group">
@@ -23,7 +24,7 @@
             <label class="control-label" style="position:relative; top:7px;">Price:</label>
           </div>
           <div class="col-sm-10">
-            <input type="text" class="form-control" name="price">
+            <input type="number" class="form-control" name="price" required>
           </div>
         </div>
         <div class="row form-group">
@@ -31,7 +32,7 @@
             <label class="control-label" style="position:relative; top:7px;">Category:</label>
           </div>
           <div class="col-sm-10">
-            <input type="text" class="form-control" name="category">
+            <input type="text" class="form-control" name="category" required>
           </div>
         </div>
             </div> 
@@ -50,9 +51,10 @@
 <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-header">
+             <div class="modal-header text-center">
+               <h4 class=" modal-title w-100 font-weight-bold" id="myModalLabel">Edit Product</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <center><h4 class="modal-title" id="myModalLabel">Edit Member</h4></center>
+                
             </div>
             <div class="modal-body">
       <div class="container-fluid">
@@ -63,7 +65,7 @@
             <label class="control-label" style="position:relative; top:7px;">Product Name:</label>
           </div>
           <div class="col-sm-10">
-            <input type="text" class="form-control product_name" name="product_name">
+            <input type="text" class="form-control product_name" name="product_name" required>
           </div>
         </div>
         <div class="row form-group">
@@ -71,7 +73,7 @@
             <label class="control-label" style="position:relative; top:7px;">Price:</label>
           </div>
           <div class="col-sm-10">
-            <input type="text" class="form-control price" name="price">
+            <input type="number" class="form-control price" name="price" required>
           </div>
         </div>
         <div class="row form-group">
@@ -79,7 +81,7 @@
             <label class="control-label" style="position:relative; top:7px;">Category:</label>
           </div>
           <div class="col-sm-10">
-            <input type="text" class="form-control category" name="category">
+            <input type="text" class="form-control category" name="category" required>
           </div>
         </div>
             </div> 
